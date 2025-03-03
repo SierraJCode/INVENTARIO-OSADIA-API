@@ -16,6 +16,7 @@ export class AuthController {
         if (!user) {
             return { message: 'Credenciales incorrectas' };
         }
-        return this.authService.login(user);
+        return this.authService.login(user.username, user.password);
     }
+
 }
